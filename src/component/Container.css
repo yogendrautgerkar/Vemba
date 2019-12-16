@@ -1,0 +1,21 @@
+.vid-c{
+  width: 768px;
+  display: inline-block;
+}
+.playlist{
+    display: inline-flex;
+    width: 768px;
+}
+.title{
+    white-space: nowrap; 
+    width: 130px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+@media only screen and (max-width: 768px) {
+    .vid-c{
+        widows: 100%;
+        display: inline;
+      }
+  }
