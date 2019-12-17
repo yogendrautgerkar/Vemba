@@ -47,11 +47,13 @@ class Container extends Component {
         vidId = this.state.playlist.length ? this.state.playlist[this.state.activeVideo].id : null;
 
         return ( <
-            div className = { 'vid-c' } > {
+            div className = { 'vid-c' } >
+
+            {
                 currentUrl && < Player currentTitle = { currentTitle }
                 currentUrl = { currentUrl }
                 playNext = { this.playNext }
-                />} <
+                /> } <
                 PlayList
                 activeIndex = { this.state.activeVideo }
                 playlist = { this.state.playlist }
