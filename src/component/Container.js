@@ -46,22 +46,20 @@ class Container extends Component {
         let vidId;
         vidId = this.state.playlist.length ? this.state.playlist[this.state.activeVideo].id : null;
 
-        return ( <
-            div className = { 'vid-c' } >
+        return (
+            <div className={'vid-c'} >
 
-            {
-                currentUrl && < Player currentTitle = { currentTitle }
-                currentUrl = { currentUrl }
-                playNext = { this.playNext }
-                /> } <
-                PlayList
-                activeIndex = { this.state.activeVideo }
-                playlist = { this.state.playlist }
-                setVideo = { this.setActiveVideo }
-                /> <
-                /div>
-            );
-        }
+                {currentUrl && < Player currentTitle={currentTitle}
+                    currentUrl={currentUrl}
+                    playNext={this.playNext}
+                />}
+                <PlayList
+                    activeIndex={this.state.activeVideo}
+                    playlist={this.state.playlist}
+                    setVideo={this.setActiveVideo} />
+            </div>
+        );
     }
+}
 
-    export default Container;
+export default Container;
