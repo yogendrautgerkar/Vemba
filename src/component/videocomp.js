@@ -11,23 +11,22 @@ class videocomp extends PureComponent {
 
     }
     getVideoView = (url) => {
-        return (
-            <video
-            // height = {'300px'}
-            width = {'768px'}
-            key={url+'vid'}
-                    muted
-                    autoPlay
-                    controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
-                    onEnded={this.playNext}
-                >
-                    <source src={url} type="video/mp4" />
+        return ( <
+            video width = { '768px' }
+            key = { url + 'vid' }
+            muted autoPlay controls = {
+                ['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen'] }
+            onEnded = { this.playNext } >
+            <
+            source src = { url }
+            type = "video/mp4" / >
 
-                </video >
+            <
+            /video >
         );
     }
     getVideoTitle = (title) => {
-console.log("title2");
+        console.log("title2");
     }
     render() {
         const url = this.props.currentUrl;
@@ -35,11 +34,10 @@ console.log("title2");
         console.log('url...', url);
         const title = this.props;
         console.log('title...', title);
-        return (
-            <>
-                {this.getVideoView(url)}
-        <p>{this.props.currentTitle}</p>
-            </>
+        return ( <
+            > { this.getVideoView(url) } <
+            p > { this.props.currentTitle } < /p> <
+            />
 
         );
     }
